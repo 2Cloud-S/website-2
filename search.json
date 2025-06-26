@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Billboard Graphic",
+    "section": "",
+    "text": "Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.\n\n\nWarning in RColorBrewer::brewer.pal(n, pal): n too large, allowed maximum for palette Set2 is 8\nReturning the palette you asked for with that many colors\n\n\nWarning: Removed 32 rows containing missing values or values outside the scale range\n(`geom_line()`).\n\n\nWarning: Removed 32 rows containing missing values or values outside the scale range\n(`geom_point()`)."
+  }
+]
