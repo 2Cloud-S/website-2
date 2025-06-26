@@ -4,13 +4,13 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site"
+    "text": "My Name is Afnan Khan and I graduate from edwards College.\n[Kane’s Free Data Science Bootcamp] (https://bootcamp.davidkane.info)"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Billboard Graphic",
+    "objectID": "about.html#about-me",
+    "href": "about.html#about-me",
+    "title": "About",
     "section": "",
-    "text": "Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.\n\n\nWarning in RColorBrewer::brewer.pal(n, pal): n too large, allowed maximum for palette Set2 is 8\nReturning the palette you asked for with that many colors\n\n\nWarning: Removed 32 rows containing missing values or values outside the scale range\n(`geom_line()`).\n\n\nWarning: Removed 32 rows containing missing values or values outside the scale range\n(`geom_point()`)."
+    "text": "My Name is Afnan Khan and I graduate from edwards College.\n[Kane’s Free Data Science Bootcamp] (https://bootcamp.davidkane.info)"
   }
 ]
