@@ -1,0 +1,11 @@
+---
+title: "About"
+---
+
+## About Me
+
+My Name is **Afnan Khan** and I graduate from *edwards College*.
+
+[Kane’s Free Data Science Bootcamp] (https://bootcamp.davidkane.info)
+
+

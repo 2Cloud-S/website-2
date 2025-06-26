@@ -1,0 +1,60 @@
+---
+title: "Billboard Graphic"
+execute:
+  echo: false
+---
+
+
+
+```{r}
+#| warning: false
+# Load required packages
+library(tidyr)
+library(ggplot2)
+library(dplyr)
+library(viridis) # For a color palette that supports more colors
+
+# Load billboard data
+data("billboard")
+
+# Prepare data: Select top 2 tracks per artist to avoid palette issues
+billboard_subset <- billboard %>%
+  filter(artist %in% c("Destiny's Child", "Jay-Z", "Nelly")) %>%
+  group_by(artist) %>%
+  slice_head(n = 2) %>% # Select top 2 tracks per artist to limit colors
+  ungroup() %>%
+  pivot_longer(cols = starts_with("wk"), 
+               names_to = "week", 
+               values_to = "rank",
+               names_prefix = "wk") %>%
+  mutate(week = as.numeric(week)) %>%
+  filter(!is.na(rank), rank >= 1, rank <= 100) # Ensure valid ranks (1-100)
+
+# Create the plot
+ggplot(billboard_subset, aes(x = week, y = rank, color = track, group = track)) +
+  geom_line(linewidth = 1.2, alpha = 0.8) + # Changed size to linewidth
+  geom_point(size = 2.5, alpha = 0.9) +
+  scale_y_reverse(breaks = seq(1, 100, by = 10), name = "Billboard Rank") +
+  scale_x_continuous(breaks = seq(1, max(billboard_subset$week, na.rm = TRUE), by = 5), name = "Week") +
+  scale_color_viridis_d(option = "D", name = "Song") + # Use viridis palette instead of Set2
+  facet_wrap(~artist, ncol = 1, scales = "free_y") +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold", size = 16),
+    plot.subtitle = element_text(hjust = 0.5, size = 12, color = "grey50"),
+    legend.position = "bottom",
+    legend.title = element_text(face = "bold"),
+    panel.grid.minor = element_blank(),
+    panel.grid.major = element_line(color = "grey90"),
+    strip.text = element_text(face = "bold", size = 12)
+  ) +
+  labs(
+    title = "Billboard Top 100 Rank Progression",
+    subtitle = "Top 2 Tracks by Destiny's Child, Jay-Z, and Nelly in 2000",
+    x = "Week on Chart",
+    y = "Billboard Rank (Lower is Better)"
+  )
+
+```
+
+
