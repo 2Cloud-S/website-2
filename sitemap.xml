@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://2Cloud-S.github.io/website-2/source-1.html</loc>
+    <lastmod>2025-06-26T22:47:50.756Z</lastmod>
+  </url>
+  <url>
     <loc>https://2Cloud-S.github.io/website-2/about.html</loc>
     <lastmod>2025-06-26T22:30:50.397Z</lastmod>
   </url>
   <url>
     <loc>https://2Cloud-S.github.io/website-2/index.html</loc>
     <lastmod>2025-06-26T22:36:44.929Z</lastmod>
+  </url>
+  <url>
+    <loc>https://2Cloud-S.github.io/website-2/source-2.html</loc>
+    <lastmod>2025-06-26T22:44:50.605Z</lastmod>
   </url>
 </urlset>
